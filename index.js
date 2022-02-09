@@ -3,7 +3,7 @@ const fs = require('fs');
 const inquirer = require('inquirer'); 
 
 // TODO: Create a function to write README file
-// const generatePage = require('./utils/generateMarkdown.js');
+const generatePage = require('./utils/generateMarkdown.js');
 
 // TODO: Create an array of questions for user input
 
@@ -146,6 +146,10 @@ return inquirer.prompt([
     } 
 },
 
-])};
+]).then(data=>{
+
+    fs.writeFileSync('README.md', generatePage(data))
+}) 
+};
 
 questions();
