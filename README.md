@@ -18,9 +18,9 @@
 
   Clone this repository, install Node and then install inquirer and link file system.
 
-  npm init -y
+  `npm init -y`
 
-  npm install inquirer
+  `npm install inquirer`
 
   ## Usage 
 
