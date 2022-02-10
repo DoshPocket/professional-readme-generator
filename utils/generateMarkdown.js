@@ -7,7 +7,7 @@ const badges = {
   MIT: mit,
 }
 
-// TODO: Create a function to generate markdown for README
+// a function to generate markdown for README
 function generateMarkdown(data) {
   console.log(data)
   return `${badges[data.license[0]]}
@@ -34,12 +34,15 @@ function generateMarkdown(data) {
   ${data.usage}
 
   ## License
+
   This project is licensed under ${data.license} license.
 
   ## Contribute
+
   ${data.contributing}
 
   ## Tests
+  
   ${data.testing}
 
   ## Questions
