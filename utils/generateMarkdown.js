@@ -11,11 +11,42 @@ const badges = {
 function generateMarkdown(data) {
   console.log(data)
   return `${badges[data.license[0]]}
-  
   # ${data.projectName}
 
+  ## Description 
+
+  ${data.description}
+
+  ## Table of Contents
+  * [Installation](#installation)
+  * [Usage](#usage)
+  * [License](#license)
+  * [Contributing](#contributing)
+  * [Tests](#tests)
+  * [Questions](#questions)
+  
+  ## Installation 
+
+  ${data.installation}
+
+  ## Usage 
+
+  ${data.usage}
+
   ## License
-  This project is licensed under ${data.license[0].toLowerCase} license.
+  This project is licensed under ${data.license} license.
+
+  ## Contribute
+  ${data.contributing}
+
+  ## Tests
+  ${data.testing}
+
+  ## Questions
+
+  For any questions about this generator, please contact me at ${data.email}. 
+
+  Visit https://github.com/${data.github} to access more of my projects.
 `;
 }
 
